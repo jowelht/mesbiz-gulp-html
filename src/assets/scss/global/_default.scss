@@ -1,0 +1,304 @@
+
+/*=============================================
+=             01. Default Css                 =
+=============================================*/
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+  }
+html, body {
+    height: 100%;
+}
+// html {
+//     direction:rtl;
+// }
+body{
+  line-height: $body-line-height;
+  font-size: $body-font-size;
+  font-style: normal;
+  font-weight: $body-font-weight;
+  visibility: visible;
+  font-family: $font-family-name;
+  color: $body-text-color;
+  position: relative;
+  background-color: $body-bg-color;
+  &.no-overflow{
+    overflow: hidden;
+  }
+}
+.main-wrapper{
+  position: relative;
+  overflow: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: $heading-text-color;
+    font-family: $heading-font-family-name;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.21;
+}
+h1 {
+    font-size: 42px;
+    @media #{$desktop-device}{
+      font-size: 38px; 
+    }
+    @media #{$tablet-device}{
+      font-size: 36px;
+    }
+    @media #{$large-mobile}{
+      font-size: 34px;
+    }
+  }
+h2 {
+    font-size: 38px;
+    @media #{$desktop-device}{
+      font-size: 34px; 
+    }
+    @media #{$tablet-device}{
+      font-size: 30px;
+    }
+    @media #{$large-mobile}{
+      font-size: 28px;
+    }
+  }
+h3 {
+    font-size: 33px;
+    @media #{$tablet-device}{
+      font-size: 28px;
+    }
+    @media #{$large-mobile}{
+      font-size: 25px;
+    }
+}
+h4 {
+    font-size: 26px;
+    @media #{$large-mobile}{
+      font-size: 24px;
+    }
+}
+h5 {
+    font-size: 20px;
+}
+h6 {
+    font-size: 18px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+a, button {
+  color: inherit;
+  display: inline-block;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+a, button, img, input {
+  transition: $transition--default;
+}
+*:focus {
+  outline: none !important;
+}
+a:focus {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+.btn.focus, .btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+a:hover {
+  text-decoration: none;
+  color: $theme-color--default;
+}
+button, input[type="submit"] {
+  cursor: pointer;
+}
+ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+.form-messege ,
+.form-messege-2  {
+    &.success {
+        color: green;
+    }
+    &.error {
+        color: red;
+    }
+}
+
+
+/*--
+    Default Class
+*/
+
+.text-color-primary {
+    color: $theme-color--default;
+}
+.text-color-secondary {
+    color: $heading-text-two;
+}
+.text-black {
+    color: $theme-color--black !important;
+}
+.bg-white {
+    background: $white;
+}
+.bg-black {
+    background: #333;
+}
+.bg-gray {
+    background: #F8F8F8;
+}
+.bg-gray-2 {
+    background: #F6FAFE;
+}
+.bg-gray-3 {
+    background: #f6f2ed;
+}
+.bg-theme-default {
+    background: $theme-color--default;
+}
+.theme-bg-secondary {
+    background: $theme-color--two;;
+}
+.black-bg {
+    background: $black;
+}
+.border-radus-5 {
+    border-radius: 5px;
+}
+.text-green {
+    color: $theme-color--two;
+}
+.bg-gradient {
+   background: -webkit-linear-gradient(top,#FFF 0,#F5F5F5 100%); 
+}
+
+
+/*-- Tab Content & Pane Fix --*/
+select {
+    padding: 3px 20px;
+    height: 56px;
+    max-width: 100%;
+    width: 100%;
+    outline: none;
+    border: 1px solid #f8f8f8;
+    border-radius: 5px;
+    background: #f8f8f8 url("../images/icons/selector-icon.webp") no-repeat center right 20px;
+    background-color: rgb(248, 248, 248);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    &:focus {
+        background: #f8f8f8 url("../images/icons/selector-icon.webp") no-repeat center right 20px !important;
+    }
+}
+.fixed-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/*------- Defauld Class --------*/
+
+::selection {
+    color: $white;
+    background-color: $theme-color--default;
+}
+form {
+    input:focus::-webkit-input-placeholder { color:transparent; }
+    input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+    input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+    input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+    input, textarea{
+        &::placeholder{
+            transition: $transition--default;
+        }
+    }
+}
+input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus, select:focus, select:focus, textarea:focus {
+    color: $theme-color--default;
+    border-color: $theme-color--default;
+}
+input[type="checkbox"] {
+    position: relative;
+    background: 0 0;
+    border-width: 0;
+    box-shadow: none;
+    margin: 0 10px 0 3px;
+    cursor: pointer;
+}
+
+
+/*=============================================
+   - Scroll top         
+=============================================*/
+
+.scroll-top{
+    position: fixed;
+    right: 30px;
+    bottom: -60px;
+    z-index: 999;
+    box-shadow: 0 30px 50px rgba(0,0,0,.03);
+    display: block;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 25px;
+    line-height: 60px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    background-color: $theme-color--default;
+    background-size: 200% auto;
+    background-position: left center;
+    color: $white;
+    transition: all .5s cubic-bezier(.645,.045,.355,1);
+    overflow: hidden;
+
+    @media #{$extra-small-mobile}{
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px;
+    }
+
+    &.show{
+        visibility: visible;
+        opacity: 1;
+        bottom: 60px;
+    }
+
+    i{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: $white;
+        transition: $transition--default;
+    }
+
+    .arrow-top{
+        transform: translate(-50%, -50%);
+    }
+
+    .arrow-bottom{
+        transform: translate(-50%, 80px);
+    }
+
+    &:hover{
+        background-position: right center;
+        .arrow-top{
+            transform: translate(-50%, -80px);
+        }
+        .arrow-bottom{
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+/*=====  End of Default CSS  ======*/

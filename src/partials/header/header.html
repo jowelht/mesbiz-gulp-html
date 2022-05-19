@@ -1,0 +1,49 @@
+@@if(headerName === 'default'){  
+    <!-- Header Bottom Wrap Start -->
+    <div class="header-area header-sticky header-area--absolute">
+        <div class="container-fluid container-fluid--cp-80">
+                <div class="header position-relative">
+
+                    <!-- brand logo -->
+                    <div class="header__logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo/light-logo.png" width="165" height="46" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    
+                    <!-- header midle box  -->
+                    <div class="header-midle-box">
+                        <div class="header-bottom-wrap d-md-block d-none">
+                            <div class="header-bottom-inner">
+                                <div class="header-bottom-left-wrap">
+                                    <!-- navigation menu -->
+                                    <div class="header__navigation d-none d-xl-block">
+                                        <nav class="navigation-menu">
+                                            @@include('header/mainMenu.html')
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- header right box -->
+                    <div class="header-right-box">
+                        <div class="header__icons-wrapper header-right-inner" id="hidden-icon-wrapper">
+                            <div class="header-button downlode-btn ml-4">
+                                <a href="#" class="ht-btn ht-btn-md"> Purchase Now</a>
+                            </div>
+                        </div>
+                        <!-- mobile menu -->
+                        <div class="mobile-navigation-icon d-block d-xl-none" id="mobile-menu-trigger">
+                            <i></i>
+                        </div>
+                        <!-- hidden icons menu -->
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- Header Bottom Wrap End -->
+        
+}
+

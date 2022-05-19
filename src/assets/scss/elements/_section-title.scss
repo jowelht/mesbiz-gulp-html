@@ -1,0 +1,21 @@
+.section-title {
+    margin-bottom: 50px;
+    @media #{$tablet-device} {
+        & br {
+            display: none;
+        }
+    }
+    .sub-title {
+        color: $theme-color--default;
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 12px;
+    }
+    .title {
+        font-weight: 500;
+        color: $black;
+    }
+}
+
+
+

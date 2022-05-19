@@ -1,0 +1,19 @@
+
+.hero-bg-image {
+    background-image: url('../images/bg/hero-overlay.png')
+}
+.hero-section {
+    padding-top: 250px;
+}
+.text-content-box {
+    margin-bottom: 50px;
+    @media #{$tablet-device} {
+        & br {
+            display: none;
+        }
+    }
+}
+.hero-video-button {
+    position: relative;
+    top: 64px;
+}

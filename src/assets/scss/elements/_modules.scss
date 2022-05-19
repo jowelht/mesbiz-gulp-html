@@ -1,0 +1,91 @@
+// Modules section Css
+
+.modules-bg-image {
+    background-image: url('../images/bg/modules-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.custom-col-5 {
+    width: 20%;
+}
+
+.modules-box-boder {
+    position: relative;
+    padding: 15px;
+    // border-right: 1px dashed rgba($white, .25);
+    &::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        left: 0;
+        top: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, #ccc 58.33333%, rgba(0, 0, 0, 0) 0%);
+        background-position: left bottom;
+        background-size: 8px 100%;
+        background-repeat: repeat-x;
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-image: linear-gradient(to bottom, #ccc 58.33333%, rgba(0, 0, 0, 0) 0%);
+        background-position: left top;
+        background-size: 100% 8px;
+        background-repeat: repeat-y;
+    }
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5) {
+        &::after {
+            display: none;
+        }
+    }
+    &:nth-child(5n-5) {
+        padding-right: 0;
+        &::before {
+            display: none;
+        }
+    }
+    &:nth-child(5n-4) {
+        padding-left: 0;
+    }
+    // &:nth-of-type(even) {
+    //     margin-top: 30px;
+    // }
+    // &:nth-child(even) {
+    //     padding-top: 0;
+    // }
+}
+.modules-box-wrap {
+    padding: 40px;
+    background-color: #6B75FF;
+    border-radius: 5px;
+}
+.modules-boder-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.modules-box-image {
+    margin: 0 auto;
+    margin-bottom: 36px;
+    width: 66px;
+    height: 66px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 100%;
+}
+.modules-content {
+    text-align: center;
+    h6 {
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
